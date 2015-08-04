@@ -1,0 +1,147 @@
+<template name="inventario">
+
+	<div class=well>
+		
+		Ingresar unidades de inventario {{inventariohistory}}
+  	  <div class="form-group">
+		  <label for="nombre">Nombre</label>
+		  	<div class="row">
+	  		  <div class="col-xs-3">
+				  <select  class="form-control" id="nombre" name="nombre">
+ 					  
+					  <option>DOTAREM</option>
+ 					  <option>GADOVIST</option>
+					  <option>PRIMOVIST</option>
+ 					  <option>MAGNEVIST</option>
+					  <option>XENETIX_300</option>
+					  <option>XENETIX_350</option>
+	 				 <option>GASTROVIEW</option>
+	 				<option>HEXABRIX_320</option>
+ 				 
+			     </select>
+			 </div>
+		  </div>
+		  
+		  <label for="nombre">Sede</label>
+		  	<div class="row">
+	  		  <div class="col-xs-3">
+				  <select  class="form-control" id="sede" name="sede">
+ 					  
+					  <option>HOSPITAL</option>
+ 					  <option>POBLADO</option>
+					  <option>CDR</option>
+ 					  <option>La80</option>
+ 					  <option>FARMACIA</option>
+	 				
+ 				 
+			     </select>
+			 </div>
+		  </div>
+		 
+		  <label for="nombre">#</label>
+		  	<div class="row">
+	  		  <div class="col-xs-2"> 
+					 <input type="number" min="0" class="form-control" id="cantidad" placeholder="Cantidad">
+			   
+			 </div>
+		  </div>
+		  
+		 
+		  		<button id="submit" type="button" class="btn btn-primary">Ingresar</button>
+	  	      
+	  </div>
+	</div>
+
+
+	<table class="table table-striped table-condensed table-bordered" id= "prueba">
+						<thead>
+							<tr>
+								<th rowspan="2">Nombre</th>
+								<th colspan="4">Sedes</th>
+								<th rowspan="2">Farmacia</th>
+							</tr>
+							<tr>
+								<!-- <th></th> -->
+								<th>HOSPITAL</th>
+								<th>Poblado</th>
+								<th>CDR</th>
+								<th>La80</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>DOTAREM</td>
+								<td>{{inventario.HOSPITAL_DOTAREM}}</td>
+								<td>{{inventario.POBLADO_DOTAREM}}</td>
+								<td>{{inventario.CDR_DOTAREM}}</td>
+								<td>{{inventario.La80_DOTAREM}}</td>
+								<td>{{inventario.TODO_DOTAREM}}</td>
+							</tr>
+
+							<tr>
+								<td>GADOVIST</td>
+								<td>{{inventario.HOSPITAL_GADOVIST}}</td>
+								<td>{{inventario.POBLADO_GADOVIST}}</td>
+								<td>{{inventario.CDR_GADOVIST}}</td>
+								<td>{{inventario.La80_GADOVIST}}</td>
+								<td>{{inventario.TODO_GADOVIST}}</td>
+							</tr>
+
+							<tr>
+								<td>PRIMOVIST</td>
+								<td>{{inventario.HOSPITAL_PRIMOVIST}}</td>
+								<td>{{inventario.POBLADO_PRIMOVIST}}</td>
+								<td>{{inventario.CDR_PRIMOVIST}}</td>
+								<td>{{inventario.La80_PRIMOVIST}}</td>
+								<td>{{inventario.TODO_PRIMOVIST}}</td>
+
+							</tr>
+							<tr>
+								<td>MAGNEVIST</td>
+								<td>{{inventario.HOSPITAL_MAGNEVIST}}</td>
+								<td>{{inventario.POBLADO_MAGNEVIST}}</td>
+								<td>{{inventario.CDR_MAGNEVIST}}</td>
+								<td>{{inventario.La80_MAGNEVIST}}</td>
+								<td>{{inventario.TODO_MAGNEVIST}}</td>
+
+							</tr>
+
+							<tr>
+								<td>XENETIX 300</td>
+								<td>{{inventario.HOSPITAL_XENETIX_300}}</td>
+								<td>{{inventario.POBLADO_XENETIX_300}}</td>
+								<td>{{inventario.CDR_XENETIX_300}}</td>
+								<td>{{inventario.La80_XENETIX_300}}</td>
+								<td>{{inventario.TODO_XENETIX_300}}</td>
+								
+							</tr>
+							<tr>
+								<td>XENETIX 350</td>
+								<td>{{inventario.HOSPITAL_XENETIX_350}}</td>
+								<td>{{inventario.POBLADO_XENETIX_350}}</td>
+								<td>{{inventario.CDR_XENETIX_350}}</td>
+								<td>{{inventario.La80_XENETIX_350}}</td>
+								<td>{{inventario.TODO_XENETIX_350}}</td>
+								
+							</tr>
+							<tr>
+								<td>GASTROVIEW</td>
+								<td>{{inventario.HOSPITAL_GASTROVIEW}}</td>
+								<td>{{inventario.POBLADO_GASTROVIEW}}</td>
+								<td>{{inventario.CDR_GASTROVIEW}}</td>
+								<td>{{inventario.La80_GASTROVIEW}}</td>
+								<td>{{inventario.TODO_GASTROVIEW}}</td>
+							</tr>
+							<tr>
+								<td>HEXABRIX 320</td>
+								<td>{{inventario.HOSPITAL_HEXABRIX_320}}</td>
+								<td>{{inventario.POBLADO_HEXABRIX_320}}</td>
+								<td>{{inventario.CDR_HEXABRIX_320}}</td>
+								<td>{{inventario.La80_HEXABRIX_320}}</td>
+								<td>{{inventario.TODO_HEXABRIX_320}}</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+</template>
