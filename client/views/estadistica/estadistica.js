@@ -1,9 +1,12 @@
-
 Template.estadistica.rendered = function () {
 
   
   $(document).ready(function() {
-    $('#reportdate span').html(moment().subtract(1, 'month').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+
+    Session.setDefault("startd", moment().subtract(1, 'month').format('MMMM D, YYYY'));
+    Session.setDefault("endd", moment().format('MMMM D, YYYY'));
+
+    $('#reportdate span').html(Session.get("startd") + ' - ' + Session.get("endd"));
  
     $('#reportdate').daterangepicker({
         format: 'MM/DD/YYYY',
@@ -44,11 +47,18 @@ Template.estadistica.rendered = function () {
         function(start, end, label) {
           console.log(start.toISOString(), end.toISOString(), label);
           $('#reportdate span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+          Session.set("startd", start._d);
+          Session.set("endd", end._d);
+          console.log(start._d);
+          console.log(end._d);
+         
         });
     
   });
 
 };
+
+
 
 //Template.estadistica.events({
 //	        'click button.save-estadisticaDialogue': function(e, tmpl) {

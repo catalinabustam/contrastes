@@ -20,7 +20,7 @@ Meteor.publish('currentUser', function() {
 });
 
 Meteor.publish('contrasts', function() {
-  return Contrasts.find();
+  return Contrasts.find({},{sort: {submitted: -1}, limit:100});
 });
 
 Meteor.publish('donationangios', function() {
