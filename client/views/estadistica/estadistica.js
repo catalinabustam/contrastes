@@ -59,7 +59,6 @@ Template.estadistica.rendered = function () {
 };
 
 
-
 //Template.estadistica.events({
 //	        'click button.save-estadisticaDialogue': function(e, tmpl) {
 //

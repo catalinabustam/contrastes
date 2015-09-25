@@ -1,43 +1,53 @@
 <template name= "visualizarestadistica">
+		
+		<div class="container">
+		
 
-	<div class="container">
-		<div class="row"> 
-			<div class="col-sm-6">
-				<div class="panel panel-success">
-					<div class="panel-heading"><strong>Sede Hospital</strong></div>
-					
-
-					<table class="table table-striped table-condensed table-bordered" id= "prueba">
-
-						 	{{> sedecontrast contrasts= cont_hosp}}
+			<div class="row"> 
+				<div class="col-sm-6">
+					<div class="panel panel-success">
+						<div class="panel-heading"><strong>	Sede Hospital</strong></div>
 						
-					</table>
-
+					<div id="dhospital">
+						<table class="table table-striped 	table-condensed table-bordered" id=	 "prueba">
+	
+							 	{{> sedecontrast 	contrasts= cont_hosp}}
+							
+						</table>
+					</div>
+					</div>
+				</div>
+	
+	
+				<div class="col-sm-6">
+					<div class="panel panel-info">
+						<div class="panel-heading"><strong>	Sede Poblado</strong></div>
+						<div id="dpoblado">
+						<table class="table table-striped 	table-condensed table-bordered">
+							{{> sedecontrast contrasts= 	cont_pob}}
+							
+						</table>
+						</div>
+					</div>
 				</div>
 			</div>
 
-
-			<div class="col-sm-6">
-				<div class="panel panel-info">
-					<div class="panel-heading"><strong>Sede Poblado</strong></div>
-
-					<table class="table table-striped table-condensed table-bordered">
-						{{> sedecontrast contrasts= cont_pob}}
-						
-					</table>
-				</div>
-			</div>
-		</div>
 
 
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="panel panel-warning">
 						<div class="panel-heading"><strong>Sede CDR</strong></div>
+
+						<div id="dcdr">
+
 						<table class="table table-striped table-condensed table-bordered">
 							{{> sedecontrast contrasts= cont_cdr}}
 						
 						</table>
+
+						</div>
+
 					</div>
 				</div>
 
@@ -45,11 +55,15 @@
 			<div class="col-sm-6">
 				<div class="panel panel-danger">
 					<div class="panel-heading"><strong>Sede La 80</strong></div>
+
+					<div id="d80">
+
 						<table class="table table-striped table-condensed table-bordered">
 							{{> sedecontrast contrasts= cont_80}}
 						
 						</table>
 
+					</div>
 					</div>
 				</div>
 			</div>
@@ -58,20 +72,18 @@
 		<div class="row">
 			<div class="panel panel-primary">
 				<div class="panel-heading"><strong>Todas las sedes</strong></div>
+				<div id="dall">
 				<table class="table table-striped table-condensed table-bordered">
 					{{> sedecontrast contrasts= cont_all}}
 				
 				</table>
 			</div>
 		</div>
+	</div>
 	
-		<a id="dlink"  style="display:none;"></a>
 
-		<button id="export">EXPORT</button>
-
-
-
-
+	
+		<a href="#" class="export">Export Table data into Excel</a>
 
 </div>
 

@@ -1,9 +1,18 @@
+
+// use reactive Session variable in helper
+
 Template.sedecontrast.helpers({ 
 
-  contrasts_query: function(name, sede) {
-    var startdate= new Date(Session.get('startd'))
-    var enddate= new Date(Session.get('endd'))
-    console.log(enddate)
+  contrasts_query: function(name,sede) {
+
+    var startdate= Session.get('startd')
+    var enddate= Session.get('endd')
+  
+    re=ReactiveMethod.call('query',name,sede,startdate,enddate);
+    
+
+
+    
     return {
 
   /*all:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name}).count(),
@@ -14,16 +23,18 @@ Template.sedecontrast.helpers({
 	aprove:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,donacion:"no",tipoampolla:"abierta"}).count()-Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,donacion:"si",tipoampolla:"nueva"}).count(),
 	consumo:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,tipoampolla:"nueva"}).count(),
   */
-  all: Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name}).count(),
-  condona_enf:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,donacion:"si",donacionentidad:false}).count(),
-  condona_ent:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,donacion:"si",donacionentidad:true}).count(),
-  condona_tot:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,donacion:"si"}).count(),
-  sin_dona:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,donacion:"no"}).count(),
-  consumo:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,tipoampolla:"nueva"}).count(),
-  apro:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,donacion:"no",tipoampolla:"abierta"}).count()-Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,donacion:"si",tipoampolla:"nueva"}).count(),
+
+  all: re.allc,
+  condona_enf:re.condona_enf,
+  condona_ent:re.condona_ent,
+  condona_tot:re.condona_tot,
+  sin_dona:re.sin_dona,
+  consumo:re.consumo,
+  apro:re.apro,
   name:name,
   start: startdate,
-  end: enddate
+  
+  
 
 
 };
