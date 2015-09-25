@@ -1,8 +1,9 @@
 Template.sedecontrast.helpers({ 
 
   contrasts_query: function(name, sede) {
-    var startdate= Session.get('startd')
-    var enddate= Session.get('endd')
+    var startdate= new Date(Session.get('startd'))
+    var enddate= new Date(Session.get('endd'))
+    console.log(enddate)
     return {
 
   /*all:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name}).count(),
@@ -26,6 +27,7 @@ Template.sedecontrast.helpers({
 
 
 };
+
   }
 });  
 
