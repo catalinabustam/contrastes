@@ -119,3 +119,4 @@ Template.visualizarestadistica.rendered = function () {
 });
 };
 
+>>>>>>> estadistica

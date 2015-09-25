@@ -1,6 +1,5 @@
 <template name= "visualizarestadistica">
 		
-
 		<div class="container">
 		
 
@@ -34,16 +33,21 @@
 			</div>
 
 
+
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="panel panel-warning">
 						<div class="panel-heading"><strong>Sede CDR</strong></div>
+
 						<div id="dcdr">
+
 						<table class="table table-striped table-condensed table-bordered">
 							{{> sedecontrast contrasts= cont_cdr}}
 						
 						</table>
+
 						</div>
+
 					</div>
 				</div>
 
@@ -51,11 +55,14 @@
 			<div class="col-sm-6">
 				<div class="panel panel-danger">
 					<div class="panel-heading"><strong>Sede La 80</strong></div>
+
 					<div id="d80">
+
 						<table class="table table-striped table-condensed table-bordered">
 							{{> sedecontrast contrasts= cont_80}}
 						
 						</table>
+
 					</div>
 					</div>
 				</div>
@@ -70,13 +77,14 @@
 					{{> sedecontrast contrasts= cont_all}}
 				
 				</table>
-				</div>
 			</div>
 		</div>
+	</div>
+	
+
 	
 		<a href="#" class="export">Export Table data into Excel</a>
 
 </div>
-
 
 </template>
