@@ -1,3 +1,4 @@
+
 // use reactive Session variable in helper
 
 Template.sedecontrast.helpers({ 
@@ -22,6 +23,7 @@ Template.sedecontrast.helpers({
 	aprove:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,donacion:"no",tipoampolla:"abierta"}).count()-Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,donacion:"si",tipoampolla:"nueva"}).count(),
 	consumo:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:sede,nombre:name,tipoampolla:"nueva"}).count(),
   */
+
   all: re.allc,
   condona_enf:re.condona_enf,
   condona_ent:re.condona_ent,
@@ -36,6 +38,7 @@ Template.sedecontrast.helpers({
 
 
 };
+
   }
 });  
 

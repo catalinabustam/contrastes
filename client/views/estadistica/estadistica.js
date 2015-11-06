@@ -58,7 +58,6 @@ Template.estadistica.rendered = function () {
 
 };
 
-// set Session variable in method callback
 
 //Template.estadistica.events({
 //	        'click button.save-estadisticaDialogue': function(e, tmpl) {
