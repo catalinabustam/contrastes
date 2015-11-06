@@ -11,7 +11,7 @@ Template.visualizarestadistica.helpers({
   		{namec: "XENETIX_300", sede:"CDR"},
   		{namec: "XENETIX_350", sede:"CDR"},
   		{namec: "GASTROVIEW", sede:"CDR"},
-  		{namec: "HEXABRIX_320", sede:"CDR"}
+  		{namec: "MULTIHANCE_05 ", sede:"CDR"}
 
   	],
   	cont_80: [
@@ -35,7 +35,7 @@ Template.visualizarestadistica.helpers({
       {namec: "XENETIX_300", sede:".*.*"},
       {namec: "XENETIX_350", sede:".*.*"},
       {namec: "GASTROVIEW", sede:".*.*"},
-      {namec: "HEXABRIX_320", sede:".*.*"}
+      {namec: "MULTIHANCE_05 ", sede:".*.*"}
     ]
 });
 
