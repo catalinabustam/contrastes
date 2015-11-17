@@ -20,3 +20,4 @@ meteorhacks:zones
 meteorhacks:kadira-profiler
 meteorhacks:aggregate
 simple:reactive-method
+twbs:bootstrap
