@@ -2,7 +2,8 @@ Template.visualizarestadistica.helpers({
 	cont_hosp: [
     	{namec: "GADOVIST", sede:"HOSPITAL"},
     	{namec: "DOTAREM", sede:"HOSPITAL"},
-    	{namec: "PRIMOVIST", sede:"HOSPITAL"}
+    	{namec: "PRIMOVIST", sede:"HOSPITAL"},
+      {namec: "MULTIHANCE_05", sede:"HOSPITAL"}
   	],
   	cont_cdr: [
       {namec: "GADOVIST", sede:"CDR"},
@@ -11,20 +12,22 @@ Template.visualizarestadistica.helpers({
   		{namec: "XENETIX_300", sede:"CDR"},
   		{namec: "XENETIX_350", sede:"CDR"},
   		{namec: "GASTROVIEW", sede:"CDR"},
-  		{namec: "MULTIHANCE_05 ", sede:"CDR"}
+  		{namec: "MULTIHANCE_05", sede:"CDR"}
 
   	],
   	cont_80: [
   		{namec: "GADOVIST", sede:"La80"},
 		  {namec: "DOTAREM", sede:"La80"},
 		  {namec: "PRIMOVIST", sede:"La80"},
-		  {namec: "MAGNEVIST", sede:"La80"}
+		  {namec: "MAGNEVIST", sede:"La80"},
+      {namec: "MULTIHANCE_05", sede:"La80"}
 
   	],
       cont_pob: [
       {namec: "GADOVIST", sede:"POBLADO"},
       {namec: "DOTAREM", sede:"POBLADO"},
-      {namec: "PRIMOVIST", sede:"POBLADO"}
+      {namec: "PRIMOVIST", sede:"POBLADO"},
+      {namec: "MULTIHANCE_05", sede:"POBLADO"}
     ],
 
       cont_all: [
@@ -35,7 +38,7 @@ Template.visualizarestadistica.helpers({
       {namec: "XENETIX_300", sede:".*.*"},
       {namec: "XENETIX_350", sede:".*.*"},
       {namec: "GASTROVIEW", sede:".*.*"},
-      {namec: "MULTIHANCE_05 ", sede:".*.*"}
+      {namec: "MULTIHANCE_05", sede:".*.*"}
     ]
 });
 
