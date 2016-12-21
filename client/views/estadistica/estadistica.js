@@ -13,7 +13,7 @@ Template.estadistica.rendered = function () {
         startDate: moment().subtract(1, 'month'),
         endDate: moment(),
         minDate: '01/01/2012',
-        maxDate: '12/31/2015',
+        maxDate: '12/31/2017',
         showDropdowns: true,
         showWeekNumbers: true,
         timePicker: false,

@@ -78,7 +78,11 @@ Template.contrast.events({
 	if( currentModalityName === "TOMOGRAFO 01"){
 	 		 	 var sede="CDR"
 	 		 }
-	if(currentOrderAcc.indexOf("0004") === 0){
+  if( currentModalityName === "RESONADOR 07"){
+         var sede="RIONEGRO"
+
+  }
+	if( currentModalityName === "RESONADOR 05"){
 			 		 	 var sede="La80"
 			 		 }
 	var countName=sede+"_"+nombre
@@ -91,7 +95,7 @@ Template.contrast.events({
       nombre: nombre,
      //ampolla: $('#ampolla').val(),
 	  tipoampolla: tipoampolla.value,
-      dosis: $('#dosis').val(),
+    dosis: $('#dosis').val(),
 	  donacion: donacion,
 	  orderAcc: currentOrderAcc,
 	  counterId: countern._id,
