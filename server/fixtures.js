@@ -4,7 +4,7 @@
   
   var currentYear=new Date().getFullYear();
 
-  if ((currentDay=="2")&&(Counters.find({month:currentMonth, year:currentYear}).count()==0)){
+  if (((currentDay=="01")||(currentDay=="1"))&&(Counters.find({month:currentMonth, year:currentYear}).count()==0)){
 	  var now = new Date().getTime();
 	  
   Counters.insert({
@@ -34,6 +34,13 @@
 	 HOSPITAL_DOTAREM:0,
 	 HOSPITAL_MAGNEVIST:0,
 	 HOSPITAL_MULTIHANCE_05 :0,
+
+	 RIONEGRO_GADOVIST:0,
+	 RIONEGRO_PRIMOVIST:0,
+	 RIONEGRO_DOTAREM:0,
+	 RIONEGRO_MAGNEVIST:0,
+	 RIONEGRO_MULTIHANCE_05 :0,
+
      submitted: now - 5 * 3600 * 1000,
      month:currentMonth,
 	 year:currentYear
@@ -45,42 +52,50 @@ if (Inventarios.find({type:'historial'}).count==0){
 	HOSPITAL_DOTAREM: 0, 
 	POBLADO_DOTAREM: 0, 
 	CDR_DOTAREM : 0, 
-	La80_DOTAREM : 0, 
+	La80_DOTAREM : 0,
+	RIONEGRO_DOTAREM : 0, 
 	TODO_DOTAREM : 0, 
 	HOSPITAL_GADOVIST : 0, 
 	POBLADO_GADOVIST : 0, 
 	CDR_GADOVIST : 0, 
-	La80_GADOVIST : 0, 
+	La80_GADOVIST : 0,
+	RIONEGRO_GADOVIST : 0,  
 	TODO_GADOVIST : 0, 
 	HOSPITAL_PRIMOVIST : 0, 
 	POBLADO_PRIMOVIST : 0, 
 	CDR_PRIMOVIST : 0, 
 	La80_PRIMOVIST : 0, 
+	RIONEGRO_PRIMOVIST : 0, 
 	TODO_PRIMOVIST : 0, 
 	HOSPITAL_MAGNEVIST : 0, 
 	POBLADO_MAGNEVIST : 0, 
 	CDR_MAGNEVIST : 0, 
 	La80_MAGNEVIST : 0, 
+	RIONEGRO_MAGNEVIST : 0, 
 	TODO_MAGNEVIST : 0, 
 	HOSPITAL_XENETIX_300 : 0, 
 	POBLADO_XENETIX_300 : 0, 
 	CDR_XENETIX_300 : 0, 
-    La80_XENETIX_300 : 0, 
+  La80_XENETIX_300 : 0, 
+  RIONEGRO_XENETIX_300 : 0, 
 	TODO_XENETIX_300 : 0, 
 	HOSPITAL_XENETIX_350 : 0, 
 	POBLADO_XENETIX_350 : 0, 
 	CDR_XENETIX_350 : 0, 
-    La80_XENETIX_350 : 0, 
+  La80_XENETIX_350 : 0, 
+	RIONEGRO_XENETIX_350 : 0, 
 	TODO_XENETIX_350 : 0, 
 	HOSPITAL_GASTROVIEW : 0, 
 	POBLADO_GASTROVIEW : 0, 
 	CDR_GASTROVIEW : 0, 
 	La80_GASTROVIEW : 0, 
+	RIONEGRO_GASTROVIEW : 0, 
 	TODO_GASTROVIEW : 0, 
 	HOSPITAL_MULTIHANCE_05  : 0, 
 	POBLADO_MULTIHANCE_05  : 0, 
 	CDR_MULTIHANCE_05  : 0, 
 	La80_MULTIHANCE_05  : 0, 
+	RIONEGRO_MULTIHANCE_05  : 0, 
 	TODO_MULTIHANCE_05  : 0
 }
 

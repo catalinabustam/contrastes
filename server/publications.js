@@ -1,5 +1,5 @@
 Meteor.publish('orders', function(options) {
-  return Orders.find({},{sort: {datetime: -1}, limit:100});
+  return Orders.find({},{sort: {datetime: -1}, limit:1000});
 });
 
 Meteor.publish('counters', function() {
@@ -20,7 +20,7 @@ Meteor.publish('currentUser', function() {
 });
 
 Meteor.publish('contrasts', function() {
-  return Contrasts.find({},{sort: {submitted: -1}, limit:100});
+  return Contrasts.find({},{sort: {submitted: -1}, limit:1000});
 });
 
 Meteor.publish('donationangios', function() {

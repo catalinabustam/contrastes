@@ -30,6 +30,13 @@ Template.visualizarestadistica.helpers({
       {namec: "MULTIHANCE_05", sede:"POBLADO"}
     ],
 
+      cont_rion: [
+      {namec: "GADOVIST", sede:"RIONEGRO"},
+      {namec: "DOTAREM", sede:"RIONEGRO"},
+      {namec: "PRIMOVIST", sede:"RIONEGRO"},
+      {namec: "MULTIHANCE_05", sede:"RIONEGRO"}
+    ],
+
       cont_all: [
       {namec: "GADOVIST", sede:".*.*"},
       {namec: "DOTAREM", sede:".*.*"},
@@ -45,13 +52,14 @@ Template.visualizarestadistica.helpers({
 Template.visualizarestadistica.rendered = function () {
     $(document).ready(function () {
 
-    function exportTableToCSV($table1, $table2, $table3, $table4, $table5, filename) {
+    function exportTableToCSV($table1, $table2, $table3, $table4, $table5, $table6, filename) {
        
         var $rows1 = $table1.find('tr:has(td)')
         var $rows2 = $table2.find('tr:has(td)')
         var $rows3 = $table3.find('tr:has(td)')
         var $rows4 = $table4.find('tr:has(td)')
         var $rows5 = $table5.find('tr:has(td)')
+        var $rows6 = $table6.find('tr:has(td)')
        
 
 
@@ -93,7 +101,7 @@ Template.visualizarestadistica.rendered = function () {
               }
               header="Nombre, Donacion enfermeria, Donacion Entidad, Total donados, Total cobrados, Total, Inventario consumo, Inventario existencia, Aprovechamiento"
 
-              csv=header + "\r\n" + "HOSPITAL"+"\r\n"+rowmap($rows1)+ "\r\n" + "POBLADO"+"\r\n"+ rowmap($rows2)+ "\r\n" + "CDR"+"\r\n"+rowmap($rows3)+ "\r\n"+ "LA80"+"\r\n"+ rowmap($rows4)+ "\r\n" + "TODAS LAS SEDES"+"\r\n"+ rowmap($rows5)
+              csv=header + "\r\n" + "HOSPITAL"+"\r\n"+rowmap($rows1)+ "\r\n" + "POBLADO"+"\r\n"+ rowmap($rows2)+ "\r\n" + "CDR"+"\r\n"+rowmap($rows3)+ "\r\n"+ "LA80"+"\r\n"+ rowmap($rows4) + "\r\n"+ "RIONEGRO"+"\r\n"+ rowmap($rows6)+ "\r\n" + "TODAS LAS SEDES"+"\r\n"+ rowmap($rows5)
               console.log(csv)
 
 
@@ -114,7 +122,7 @@ Template.visualizarestadistica.rendered = function () {
     // This must be a hyperlink
     $(".export").on('click', function (event) {
         // CSV
-        exportTableToCSV.apply(this, [$('#dhospital>table'),$('#dpoblado>table'),$('#dcdr>table'),$('#d80>table'), $('#dall>table'), 'estadisticas_contraste.csv']);
+        exportTableToCSV.apply(this, [$('#dhospital>table'),$('#dpoblado>table'),$('#dcdr>table'),$('#d80>table'), $('#dall>table'), $('#drion>table'), 'estadisticas_contraste.csv']);
  
         // IF CSV, don't do event.preventDefault() or return false
         // We actually need this to be a typical hyperlink
