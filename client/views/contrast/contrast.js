@@ -9,7 +9,7 @@ Template.contrast.helpers({
 	},
 	modality:function(){
 		var modality=Session.get('selectedModality')
-		return modality==="RM"
+		return modality==="MR"
 
 	},
 	donacion:function(){
@@ -68,21 +68,21 @@ Template.contrast.events({
 	if( currentOrderAcc.indexOf("0005") === 0){
 		 	 var sede="HOSPITAL"
 		 }
-	if( currentModalityName === "RESONADOR 03"){
+	if( currentModalityName === "Resonador 3"){
 	 		 	 var sede="POBLADO"
 
 	}
-	if( currentModalityName === "RESONADOR 04"){
+	if( currentModalityName === "Resonador 4"){
 		 		 	 var sede="CDR"
 		 		 }
-	if( currentModalityName === "TOMOGRAFO 01"){
+	if( currentModalityName === "Tomógrafo 1"){
 	 		 	 var sede="CDR"
 	 		 }
-  if( currentModalityName === "RESONADOR 07"){
+  if( currentModalityName === "Resonador 7"){
          var sede="RIONEGRO"
 
   }
-	if( currentModalityName === "RESONADOR 05"){
+	if( currentModalityName === "Resonador 5"){
 			 		 	 var sede="La80"
 			 		 }
 	var countName=sede+"_"+nombre
