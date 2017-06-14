@@ -74,6 +74,7 @@ Template.orderItem.events({
 	  procedureCode=$order.attr('procedure-code')
 	  institutionCode=$order.attr('institution-code')
 	  remarks=$order.attr('remarks')
+    console.log(modalityName)
 	  Session.set('selectedOrderAcc', orderAcc)
 	  Session.set('selectedPatientName', patientName)
 	  Session.set('selectedModality',modality)
