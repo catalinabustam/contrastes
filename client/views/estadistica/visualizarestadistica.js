@@ -11,6 +11,7 @@ Template.visualizarestadistica.helpers({
       {namec: "PRIMOVIST", sede:"CDR"},
   		{namec: "XENETIX_300", sede:"CDR"},
   		{namec: "XENETIX_350", sede:"CDR"},
+      {namec: "XENETIX_350_100", sede:"CDR"},
   		{namec: "GASTROVIEW", sede:"CDR"},
   		{namec: "MULTIHANCE_05", sede:"CDR"}
 
@@ -44,6 +45,7 @@ Template.visualizarestadistica.helpers({
       {namec: "MAGNEVIST", sede:".*.*"},
       {namec: "XENETIX_300", sede:".*.*"},
       {namec: "XENETIX_350", sede:".*.*"},
+      {namec: "XENETIX_350_100", sede:".*.*"},
       {namec: "GASTROVIEW", sede:".*.*"},
       {namec: "MULTIHANCE_05", sede:".*.*"}
     ]
